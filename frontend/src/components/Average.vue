@@ -58,6 +58,7 @@
         class="flex-child"
         label="name"
         :options="bodystyles"
+        :disabled="bodystyles.length == 0"
         v-model="selected.bodystyle"
       />
     </div>
@@ -67,6 +68,7 @@
         class="flex-child"
         label="name"
         :options="marks"
+        :disabled="marks.length == 0"
         v-model="selected.mark"
         @input="onMarkChange"
       />
@@ -77,6 +79,7 @@
         class="flex-child"
         label="name"
         :options="models"
+        :disabled="models.length == 0"
         v-model="selected.model"
       />
     </div>
@@ -86,6 +89,7 @@
         class="flex-child"
         label="name"
         :options="gears"
+        :disabled="gears.length == 0"
         v-model="selected.gear"
       />
     </div>
@@ -95,6 +99,7 @@
         class="flex-child"
         label="name"
         :options="fuels"
+        :disabled="fuels.length == 0"
         v-model="selected.fuel"
       />
     </div>
@@ -113,6 +118,7 @@
         class="flex-child"
         label="name"
         :options="driverTypes"
+        :disabled="driverTypes.length == 0"
         v-model="selected.driver_type"
       />
     </div>
@@ -152,6 +158,7 @@
         class="flex-child"
         label="name"
         :options="cities"
+        :disabled="cities.length == 0"
         v-model="selected.city"
       />
     </div>
@@ -486,6 +493,6 @@ export default {
     for (let i = year - 90; i <= year; i += 1) {
        this.years[year - i] = {name: i, value: i};
     }
-  }
+  },
 };
 </script>
